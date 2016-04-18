@@ -1,1 +1,10 @@
-{"filter":false,"title":"requirements.txt","tooltip":"/example/requirements.txt","undoManager":{"mark":4,"position":4,"stack":[[{"start":{"row":0,"column":0},"end":{"row":0,"column":1},"action":"insert","lines":["s"],"id":2}],[{"start":{"row":0,"column":1},"end":{"row":0,"column":2},"action":"insert","lines":["u"],"id":3}],[{"start":{"row":0,"column":2},"end":{"row":0,"column":3},"action":"insert","lines":["d"],"id":4}],[{"start":{"row":0,"column":3},"end":{"row":0,"column":4},"action":"insert","lines":["o"],"id":5}],[{"start":{"row":0,"column":4},"end":{"row":0,"column":5},"action":"insert","lines":[" "],"id":6}]]},"ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":0,"column":5},"end":{"row":0,"column":5},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":0},"timestamp":1460664822440,"hash":"152b4df7a3bef07fc13e78b9cc268c59a84c4d1a"}
+sudo Flask==0.10.1
+Flask-Script
+Flask-SQLAlchemy
+itsdangerous==0.24
+Jinja2==2.7.3
+MarkupSafe==0.23
+python-engineio
+python-socketio
+six==1.9.0
+Werkzeug==0.10.4

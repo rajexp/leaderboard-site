@@ -1,1 +1,16 @@
-{"filter":false,"title":"models.py","tooltip":"/example/models.py","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":44.5,"scrollleft":0,"selection":{"start":{"row":9,"column":35},"end":{"row":9,"column":35},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":{"row":13,"state":"start","mode":"ace/mode/python"}},"timestamp":1460772482000,"hash":"b1b0dbd82776ad872473056f9da9b07d50235a85"}
+#!/usr/bin/env python
+import datetime
+from flask_sqlalchemy import SQLAlchemy
+from example import app
+db=SQLAlchemy(app)
+class User(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    username = db.Column(db.String,nullable=False)
+    score    = db.Column(db.Integer)
+    guesses  = db.Column(db.Integer)
+    country  = db.Column(db.String)
+    def __init__(self,username,score,guesses,country):
+        self.username = username
+        self.score    = score
+        self.guesses  = guesses
+        self.country  = country

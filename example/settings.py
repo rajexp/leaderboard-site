@@ -1,1 +1,11 @@
-{"filter":false,"title":"settings.py","tooltip":"/example/settings.py","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":0,"column":0},"end":{"row":0,"column":0},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":{"row":18,"mode":"ace/mode/python"}},"timestamp":1460666825000,"hash":"32e182d8ead665ff3b7e419f112ec9e83170bf2d"}
+class Config(object):
+    SECRET_KEY = 'F34TF$($e34DD'
+
+class ProdConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/example'
+    SQLALCHEMY_TRACK_MODIFICATIONS=True
+class DevConfig(Config):
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///example.db'
+    SQLALCHEMY_ECHO = True
+    SQLALCHEMY_TRACK_MODIFICATIONS= True
