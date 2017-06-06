@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row"><div class="span6 pull-left">
+    <h2 id ="cup"><img  src="{{ url_for('static', filename='svg/trophy.svg') }}" height="60px" />    Top Ten Players</h2>
+    </div><div class="span4 pull-right form-group">
+						  <form class="form-inline" role="form" id="searchbox" method="post" action="{{ url_for('search') }}">
+                  <input type="text" name="term"  class="form-control"placeholder="Search user"/> &nbsp;
+                  <input type="submit" class="form-control" />
+                </form>
+              </div>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th># Rank</th>
+        <th>Player</th>
+        <th>Score</th>
+        <th>Guesses</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>{% for user in users %}
+      <tr>
+        <td><div class="badge">{{ loop.index }}</div></td>
+        <td>{{ user.username}}</td>
+        <td>{{ user.score }}</td>
+        <td>{{ user.guesses }}</td>
+        <td>{{ user.country}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  
+  <div class="span4">
+  <ul class="pager">
+  <li ><a href="{{ url_for('leader',i=2) }}">Next</a></li>
+</ul>
+  </div>
+  </div>
+{% endblock %}
