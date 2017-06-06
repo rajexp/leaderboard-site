@@ -4,6 +4,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'F34TF$($e34DD'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///leaderboard.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
 from . import models as m
 @app.route('/')
 def home():
